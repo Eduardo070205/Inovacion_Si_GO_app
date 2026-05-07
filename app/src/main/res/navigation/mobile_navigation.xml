@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.inovacion_2026.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_historial"
+        android:name="com.example.inovacion_2026.ui.historial.HistorialFragment"
+        android:label="@string/menu_historial"
+        tools:layout="@layout/fragment_historial" />
+
+    <fragment
+        android:id="@+id/nav_pronostico"
+        android:name="com.example.inovacion_2026.ui.pronostico.PronosticoFragment"
+        android:label="@string/menu_pronostico"
+        tools:layout="@layout/fragment_pronostico" />
+    <fragment
+        android:id="@+id/nav_gestion"
+        android:name="com.example.inovacion_2026.ui.gestion_plantas.GestionPlantasFragment"
+        android:label="@string/menu_gestion_plantas" />
+</navigation>
