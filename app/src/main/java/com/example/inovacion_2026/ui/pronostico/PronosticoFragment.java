@@ -44,7 +44,18 @@ public class PronosticoFragment extends Fragment {
 
         apiService = retrofit.create(apiService.class);
 
-        obtenerPronostico();
+        runnable = new Runnable() {
+            @Override
+            public void run() {
+                obtenerPronostico();
+
+                handler.postDelayed(this, (3600*1000));
+            }
+        };
+
+
+
+        handler.post(runnable);
 
         return binding.getRoot();
     }
@@ -126,6 +137,9 @@ public class PronosticoFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        if (handler != null && runnable != null) {
+            handler.removeCallbacks(runnable);
+        }
         binding = null;
     }
 }

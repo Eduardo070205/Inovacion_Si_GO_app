@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment;
 import com.example.inovacion_2026.data_api.apiService;
 import com.example.inovacion_2026.data_api.EstadoTotal;
 import com.example.inovacion_2026.databinding.FragmentHomeBinding;
-
+import com.example.inovacion_2026.util.WeatherEmojiUtils;
 
 
 import retrofit2.Call;
@@ -75,6 +75,8 @@ public class HomeFragment extends Fragment {
                     binding.txtHumedadSensor.setText(String.valueOf(data.lecturas.hum_aire));
                     binding.txtLluviaSensor.setText(String.valueOf(data.lecturas.lluvia));
                     binding.txtTemperaturaSensor.setText(String.valueOf((int)data.lecturas.temp_aire));
+                    binding.txtClima.setText(WeatherEmojiUtils.climaToEmoji(data.analisis.clima_internet));
+                    binding.txtClimaDesc.setText(String.valueOf(data.analisis.clima_internet));
                 } else {
                     Log.e("API_ERROR", "Error en la respuesta: " + response.code());
                 }
