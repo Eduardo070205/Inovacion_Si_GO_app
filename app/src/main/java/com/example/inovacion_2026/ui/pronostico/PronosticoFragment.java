@@ -7,18 +7,16 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
-import com.example.inovacion_2026.data_api.EstadoTotal;
 import com.example.inovacion_2026.data_api.PronosticoItem;
 import com.example.inovacion_2026.data_api.PronosticoResponse;
 import com.example.inovacion_2026.data_api.apiService;
 import com.example.inovacion_2026.databinding.FragmentPronosticoBinding;
+import com.example.inovacion_2026.util.WeatherEmojiUtils;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -72,11 +70,11 @@ public class PronosticoFragment extends Fragment {
                     binding.txtHora4.setText(String.valueOf(cuartaHora.getFecha()));
                     binding.txtHora5.setText(String.valueOf(quintaHora.getFecha()));
 
-                    binding.txtClmH1.setText(String.valueOf(primeraHora.getDescripcion()));
-                    binding.txtClmH2.setText(String.valueOf(segundaHora.getDescripcion()));
-                    binding.txtClmH3.setText(String.valueOf(terceraHora.getDescripcion()));
-                    binding.txtClmH4.setText(String.valueOf(cuartaHora.getDescripcion()));
-                    binding.txtClmH5.setText(String.valueOf(quintaHora.getDescripcion()));
+                    binding.txtClmH1.setText(WeatherEmojiUtils.climaToEmoji(primeraHora.getDescripcion()));
+                    binding.txtClmH2.setText(WeatherEmojiUtils.climaToEmoji(segundaHora.getDescripcion()));
+                    binding.txtClmH3.setText(WeatherEmojiUtils.climaToEmoji(terceraHora.getDescripcion()));
+                    binding.txtClmH4.setText(WeatherEmojiUtils.climaToEmoji(cuartaHora.getDescripcion()));
+                    binding.txtClmH5.setText(WeatherEmojiUtils.climaToEmoji(quintaHora.getDescripcion()));
 
                     binding.txtTmpH1.setText(String.valueOf(Math.round(primeraHora.getTemperatura())) + " °");
                     binding.txtTmpH2.setText(String.valueOf(Math.round(segundaHora.getTemperatura())) + " °");
@@ -101,9 +99,9 @@ public class PronosticoFragment extends Fragment {
                     binding.txtMinDia2.setText(String.valueOf(Math.round(segundoDia.getTemp_min())) + " °");
                     binding.txtMinDia3.setText(String.valueOf(Math.round(tercerDia.getTemp_min())) + " °");
 
-                    binding.txtClmDia1.setText(String.valueOf(primerDia.getDescripcion()));
-                    binding.txtClmDia2.setText(String.valueOf(segundoDia.getDescripcion()));
-                    binding.txtClmDia3.setText(String.valueOf(tercerDia.getDescripcion()));
+                    binding.txtClmDia1.setText(WeatherEmojiUtils.climaToEmoji(primerDia.getDescripcion()));
+                    binding.txtClmDia2.setText(WeatherEmojiUtils.climaToEmoji(segundoDia.getDescripcion()));
+                    binding.txtClmDia3.setText(WeatherEmojiUtils.climaToEmoji(tercerDia.getDescripcion()));
 
 
                 } else {

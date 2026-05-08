@@ -1,541 +1,621 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#F0F4F8"
     tools:context=".ui.pronostico.PronosticoFragment">
 
-    <TextView
-        android:id="@+id/txt_clm_dia3"
-        android:layout_width="101dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="56dp"
-        android:text="@string/espera_datos"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_min_dia3"
-        app:layout_constraintTop_toBottomOf="@+id/txt_clm_dia2" />
-
-    <TextView
-        android:id="@+id/txt_clm_dia1"
-        android:layout_width="101dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="12dp"
-        android:text="@string/espera_datos"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_min_dia1"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
-
-    <TextView
-        android:id="@+id/txt_clm_dia2"
-        android:layout_width="101dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="12dp"
-        android:text="@string/espera_datos"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txt_clm_dia3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_min_dia2"
-        app:layout_constraintTop_toBottomOf="@+id/txt_clm_dia1" />
-
-    <TextView
-        android:id="@+id/txt_min_dia3"
-        android:layout_width="80dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="59dp"
-        android:text="@string/espera_datos"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txt_clm_dia3"
-        app:layout_constraintStart_toEndOf="@+id/txt_max_dia3"
-        app:layout_constraintTop_toBottomOf="@+id/txt_min_dia2" />
-
-    <TextView
-        android:id="@+id/txt_min_dia2"
-        android:layout_width="80dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/espera_datos"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toEndOf="@+id/txt_max_dia2"
-        app:layout_constraintTop_toBottomOf="@+id/txt_min_dia1" />
-
-    <TextView
-        android:id="@+id/txt_min_dia1"
-        android:layout_width="80dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/espera_datos"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txt_min_dia2"
-        app:layout_constraintEnd_toStartOf="@+id/txt_clm_dia1"
-        app:layout_constraintStart_toEndOf="@+id/txt_max_dia1"
-        app:layout_constraintTop_toBottomOf="@+id/textView21" />
-
-    <TextView
-        android:id="@+id/txt_fecha_dia3"
-        android:layout_width="80dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="58dp"
-        android:text="@string/espera_datos"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txt_max_dia3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_fecha_dia2" />
-
-    <TextView
-        android:id="@+id/txt_max_dia3"
-        android:layout_width="80dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="58dp"
-        android:text="@string/espera_datos"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txt_min_dia3"
-        app:layout_constraintStart_toEndOf="@+id/txt_fecha_dia3"
-        app:layout_constraintTop_toBottomOf="@+id/txt_max_dia2" />
-
-    <TextView
-        android:id="@+id/txt_max_dia2"
-        android:layout_width="80dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/espera_datos"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txt_max_dia3"
-        app:layout_constraintEnd_toStartOf="@+id/txt_min_dia2"
-        app:layout_constraintStart_toEndOf="@+id/txt_fecha_dia2"
-        app:layout_constraintTop_toBottomOf="@+id/txt_max_dia1" />
-
-    <TextView
-        android:id="@+id/txt_max_dia1"
-        android:layout_width="80dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="14dp"
-        android:text="@string/espera_datos"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txt_max_dia2"
-        app:layout_constraintEnd_toStartOf="@+id/txt_min_dia1"
-        app:layout_constraintStart_toEndOf="@+id/txt_fecha_dia1"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
-
-    <TextView
-        android:id="@+id/txt_fecha_dia2"
-        android:layout_width="80dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/espera_datos"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txt_fecha_dia3"
-        app:layout_constraintEnd_toStartOf="@+id/txt_max_dia2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_fecha_dia1" />
-
-    <TextView
-        android:id="@+id/txt_clm_h5"
-        android:layout_width="119dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="276dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="59dp"
-        android:text="@string/espera_datos"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/textView22"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_clm_h4" />
-
-    <TextView
-        android:id="@+id/txt_clm_h4"
-        android:layout_width="119dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="276dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/espera_datos"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txt_clm_h5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_clm_h3" />
-
-    <TextView
-        android:id="@+id/txt_clm_h3"
-        android:layout_width="119dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="276dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/espera_datos"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txt_clm_h4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_clm_h2" />
-
-    <TextView
-        android:id="@+id/txt_clm_h2"
-        android:layout_width="119dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="276dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/espera_datos"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txt_clm_h3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_clm_h1" />
-
-    <TextView
-        android:id="@+id/txt_clm_h1"
-        android:layout_width="119dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="276dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/espera_datos"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txt_clm_h2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
-
-    <TextView
-        android:id="@+id/txt_tmp_h5"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="48dp"
-        android:text="@string/espera_datos"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@+id/txt_clm_h5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_tmp_h4" />
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
 
-    <TextView
-        android:id="@+id/txt_tmp_h4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="48dp"
-        android:text="@string/espera_datos"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txt_tmp_h5"
-        app:layout_constraintEnd_toStartOf="@+id/txt_clm_h4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_tmp_h3" />
+        <!-- ===== HEADER ===== -->
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="4dp"
+            android:paddingHorizontal="20dp"
+            android:text="@string/titulo_pronostico"
+            android:textAlignment="center"
+            android:textColor="#1A1A2E"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
 
-    <TextView
-        android:id="@+id/txt_tmp_h3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="48dp"
-        android:text="@string/espera_datos"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txt_tmp_h4"
-        app:layout_constraintEnd_toStartOf="@+id/txt_clm_h3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_tmp_h2" />
+        <!-- ===== SECCIÓN: PRÓXIMAS HORAS ===== -->
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/proximas_horas"
+            android:textColor="#1A1A2E"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
 
-    <TextView
-        android:id="@+id/txt_tmp_h2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="48dp"
-        android:text="@string/espera_datos"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txt_tmp_h3"
-        app:layout_constraintEnd_toStartOf="@+id/txt_clm_h2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_tmp_h1" />
+        <!-- ScrollView horizontal para cards de horas -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:scrollbars="none"
+            android:clipToPadding="false">
 
-    <TextView
-        android:id="@+id/txt_hora_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="80dp"
-        android:text="@string/espera_datos"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/textView18"
-        app:layout_constraintEnd_toStartOf="@+id/txt_tmp_h5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hora_4" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
 
-    <TextView
-        android:id="@+id/txt_hora_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="80dp"
-        android:text="@string/espera_datos"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txt_hora_5"
-        app:layout_constraintEnd_toStartOf="@+id/txt_tmp_h4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hora_3" />
+                <!-- CARD HORA 1 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="#FFFFFF">
 
-    <TextView
-        android:id="@+id/txt_hora_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="80dp"
-        android:text="@string/espera_datos"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txt_hora_4"
-        app:layout_constraintEnd_toStartOf="@+id/txt_tmp_h3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hora_2" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp"
+                        android:paddingHorizontal="8dp">
 
-    <TextView
-        android:id="@+id/txt_hora_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="80dp"
-        android:text="@string/espera_datos"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txt_hora_3"
-        app:layout_constraintEnd_toStartOf="@+id/txt_tmp_h2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hora_1" />
+                        <!-- Badge hora -->
+                        <TextView
+                            android:id="@+id/txt_hora_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_badge_hora"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="@string/espera_datos"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="86dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="320dp"
-        android:text="@string/minima"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textView20"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+                        <!-- Emoji clima -->
+                        <TextView
+                            android:id="@+id/txt_clm_h1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="🌡️"
+                            android:textSize="30sp" />
 
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="90dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="76dp"
-        android:text="@string/clima"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textView21"
-        app:layout_constraintTop_toBottomOf="@+id/txt_clm_h5" />
+                        <!-- Temperatura -->
+                        <TextView
+                            android:id="@+id/txt_tmp_h1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/espera_datos"
+                            android:textColor="#E63946"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="78dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/fecha"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="170dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="234dp"
-        android:text="@string/proximos_3_dias"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hora_5" />
+                <!-- CARD HORA 2 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="#FFFFFF">
 
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="93dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/temp_maxima"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textView19"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp"
+                        android:paddingHorizontal="8dp">
 
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="110dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="20dp"
-        android:text="@string/hora"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/txt_hora_1"
-        app:layout_constraintEnd_toStartOf="@+id/textView14"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                        <TextView
+                            android:id="@+id/txt_hora_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_badge_hora"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="@string/espera_datos"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="97dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="13dp"
-        android:text="@string/clima"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/txt_clm_h1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                        <TextView
+                            android:id="@+id/txt_clm_h2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="🌡️"
+                            android:textSize="30sp" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="291dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="98dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="98dp"
-        android:text="@string/titulo_pronostico"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                        <TextView
+                            android:id="@+id/txt_tmp_h2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/espera_datos"
+                            android:textColor="#E63946"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="170dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="225dp"
-        android:layout_marginBottom="597dp"
-        android:text="@string/proximas_horas"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.0" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="122dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="14dp"
-        android:text="@string/temperatura"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/txt_tmp_h1"
-        app:layout_constraintEnd_toStartOf="@+id/textView17"
-        app:layout_constraintStart_toEndOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                <!-- CARD HORA 3 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="#FFFFFF">
 
-    <TextView
-        android:id="@+id/txt_hora_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="80dp"
-        android:text="@string/espera_datos"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txt_hora_2"
-        app:layout_constraintEnd_toStartOf="@+id/txt_tmp_h1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp"
+                        android:paddingHorizontal="8dp">
 
-    <TextView
-        android:id="@+id/txt_tmp_h1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="48dp"
-        android:text="@string/espera_datos"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txt_tmp_h2"
-        app:layout_constraintEnd_toStartOf="@+id/txt_clm_h1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+                        <TextView
+                            android:id="@+id/txt_hora_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_badge_hora"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="@string/espera_datos"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txt_fecha_dia1"
-        android:layout_width="80dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="14dp"
-        android:text="@string/espera_datos"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txt_fecha_dia2"
-        app:layout_constraintEnd_toStartOf="@+id/txt_max_dia1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+                        <TextView
+                            android:id="@+id/txt_clm_h3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="🌡️"
+                            android:textSize="30sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                        <TextView
+                            android:id="@+id/txt_tmp_h3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/espera_datos"
+                            android:textColor="#E63946"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- CARD HORA 4 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp"
+                        android:paddingHorizontal="8dp">
+
+                        <TextView
+                            android:id="@+id/txt_hora_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_badge_hora"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="@string/espera_datos"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_clm_h4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="🌡️"
+                            android:textSize="30sp" />
+
+                        <TextView
+                            android:id="@+id/txt_tmp_h4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/espera_datos"
+                            android:textColor="#E63946"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- CARD HORA 5 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp"
+                        android:paddingHorizontal="8dp">
+
+                        <TextView
+                            android:id="@+id/txt_hora_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_badge_hora"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="@string/espera_datos"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_clm_h5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="🌡️"
+                            android:textSize="30sp" />
+
+                        <TextView
+                            android:id="@+id/txt_tmp_h5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/espera_datos"
+                            android:textColor="#E63946"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- ===== SECCIÓN: PRÓXIMOS 3 DÍAS ===== -->
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/proximos_3_dias"
+            android:textColor="#1A1A2E"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Card contenedora de la tabla de días -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <!-- Encabezado de columnas -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.6"
+                        android:text="FECHA"
+                        android:textColor="#9CA3AF"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="center"
+                        android:text="MÁX"
+                        android:textColor="#E63946"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="center"
+                        android:text="MÍN"
+                        android:textColor="#3B82F6"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="center"
+                        android:text="CLIMA"
+                        android:textColor="#9CA3AF"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="#F3F4F6" />
+
+                <!-- FILA DÍA 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/txt_fecha_dia1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.6"
+                        android:text="@string/espera_datos"
+                        android:textColor="#374151"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/txt_max_dia1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_badge_max"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="@string/espera_datos"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/txt_min_dia1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_badge_min"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="@string/espera_datos"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Emoji clima día 1 -->
+                    <TextView
+                        android:id="@+id/txt_clm_dia1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="center"
+                        android:text="🌡️"
+                        android:textSize="26sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="#F3F4F6" />
+
+                <!-- FILA DÍA 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/txt_fecha_dia2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.6"
+                        android:text="@string/espera_datos"
+                        android:textColor="#374151"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/txt_max_dia2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_badge_max"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="@string/espera_datos"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/txt_min_dia2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_badge_min"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="@string/espera_datos"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_clm_dia2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="center"
+                        android:text="🌡️"
+                        android:textSize="26sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="#F3F4F6" />
+
+                <!-- FILA DÍA 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/txt_fecha_dia3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.6"
+                        android:text="@string/espera_datos"
+                        android:textColor="#374151"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/txt_max_dia3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_badge_max"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="@string/espera_datos"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/txt_min_dia3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_badge_min"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="@string/espera_datos"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_clm_dia3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="center"
+                        android:text="🌡️"
+                        android:textSize="26sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
