@@ -78,11 +78,11 @@ public class PronosticoFragment extends Fragment {
                     binding.txtClmH4.setText(String.valueOf(cuartaHora.getDescripcion()));
                     binding.txtClmH5.setText(String.valueOf(quintaHora.getDescripcion()));
 
-                    binding.txtTmpH1.setText(String.valueOf(primeraHora.getTemperatura()));
-                    binding.txtTmpH2.setText(String.valueOf(segundaHora.getTemperatura()));
-                    binding.txtTmpH3.setText(String.valueOf(terceraHora.getTemperatura()));
-                    binding.txtTmpH4.setText(String.valueOf(cuartaHora.getTemperatura()));
-                    binding.txtTmpH5.setText(String.valueOf(quintaHora.getTemperatura()));
+                    binding.txtTmpH1.setText(String.valueOf(Math.round(primeraHora.getTemperatura())) + " °");
+                    binding.txtTmpH2.setText(String.valueOf(Math.round(segundaHora.getTemperatura())) + " °");
+                    binding.txtTmpH3.setText(String.valueOf(Math.round(terceraHora.getTemperatura())) + " °");
+                    binding.txtTmpH4.setText(String.valueOf(Math.round(cuartaHora.getTemperatura())) + " °");
+                    binding.txtTmpH5.setText(String.valueOf(Math.round(quintaHora.getTemperatura())) + " °");
 
 
                     PronosticoItem primerDia = datos.getProximos_3_dias().get(0);
@@ -93,13 +93,13 @@ public class PronosticoFragment extends Fragment {
                     binding.txtFechaDia2.setText(String.valueOf(segundoDia.getFecha()));
                     binding.txtFechaDia3.setText(String.valueOf(tercerDia.getFecha()));
 
-                    binding.txtMaxDia1.setText(String.valueOf(primerDia.getTemp_max()));
-                    binding.txtMaxDia2.setText(String.valueOf(segundoDia.getTemp_max()));
-                    binding.txtMaxDia3.setText(String.valueOf(tercerDia.getTemp_max()));
+                    binding.txtMaxDia1.setText(String.valueOf(Math.round(primerDia.getTemp_max())) + " °");
+                    binding.txtMaxDia2.setText(String.valueOf(Math.round(segundoDia.getTemp_max())) + " °");
+                    binding.txtMaxDia3.setText(String.valueOf(Math.round(tercerDia.getTemp_max())) + " °");
 
-                    binding.txtMinDia1.setText(String.valueOf(primerDia.getTemp_min()));
-                    binding.txtMinDia2.setText(String.valueOf(segundoDia.getTemp_min()));
-                    binding.txtMinDia3.setText(String.valueOf(tercerDia.getTemp_min()));
+                    binding.txtMinDia1.setText(String.valueOf(Math.round(primerDia.getTemp_min())) + " °");
+                    binding.txtMinDia2.setText(String.valueOf(Math.round(segundoDia.getTemp_min())) + " °");
+                    binding.txtMinDia3.setText(String.valueOf(Math.round(tercerDia.getTemp_min())) + " °");
 
                     binding.txtClmDia1.setText(String.valueOf(primerDia.getDescripcion()));
                     binding.txtClmDia2.setText(String.valueOf(segundoDia.getDescripcion()));

@@ -29,7 +29,7 @@
     <string name="titulo_pronostico">Pronostico del Clima</string>
     <string name="proximas_horas">Próximas Horas</string>
     <string name="proximos_3_dias">Próximos 3 días</string>"
-    <string name="hora">Fecha y Hora</string>
+    <string name="hora">Hora</string>
     <string name="temp_maxima">Máxima</string>
     <string name="minima">Minima</string>
     <string name="fecha">Fecha</string>
