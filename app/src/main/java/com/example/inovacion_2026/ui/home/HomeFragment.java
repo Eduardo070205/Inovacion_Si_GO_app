@@ -39,7 +39,7 @@ public class HomeFragment extends Fragment {
 
         // Configuración de Retrofit (se hace una sola vez)
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.0.20:8000/")
+                .baseUrl("http://192.168.0.28:8000/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

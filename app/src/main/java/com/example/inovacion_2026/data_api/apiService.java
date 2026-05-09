@@ -16,4 +16,8 @@ public interface apiService {
 
     @GET("api/pronostico")
     Call<PronosticoResponse> obtenerPronostico();
+
+    @GET("api/historial")
+    Call<HistorialResponse> obtenerHistorial();
+
 }

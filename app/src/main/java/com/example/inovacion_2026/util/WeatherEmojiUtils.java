@@ -2,7 +2,7 @@ package com.example.inovacion_2026.util;
 
 public class WeatherEmojiUtils {
 
-    // Agrega este método en tu Fragment o en una clase utilitaria (p.ej. WeatherUtils.java)
+
 
     public static String climaToEmoji(String descripcion) {
         if (descripcion == null) return "🌡️";
@@ -18,7 +18,8 @@ public class WeatherEmojiUtils {
         if (d.contains("nubes dispersas") || d.contains("scattered"))   return "⛅";
 
         // Muy nublado / overcast
-        if (d.contains("muy nublado") || d.contains("overcast"))        return "☁️";
+        if (d.contains("muy nublado") || d.contains("overcast")
+                || d.contains("nuboso"))        return "☁️";
 
         // Nublado / broken clouds
         if (d.contains("nublado") || d.contains("broken clouds"))       return "🌥️";

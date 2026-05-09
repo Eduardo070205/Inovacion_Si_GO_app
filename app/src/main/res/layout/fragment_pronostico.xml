@@ -28,6 +28,62 @@
             android:textStyle="bold"
             android:fontFamily="sans-serif-medium" />
 
+        <!-- ===== CARD ALERTA PRONÓSTICO ===== -->
+        <!-- Pega este bloque justo debajo del TextView del header (textView8) y antes de "Próximas Horas" -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_alerta_pronostico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="#FFF3CD"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚠️"
+                    android:textSize="28sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ALERTA CLIMÁTICA"
+                        android:textColor="#92400E"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_alerta_pronostico"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text=""
+                        android:textColor="#78350F"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
         <!-- ===== SECCIÓN: PRÓXIMAS HORAS ===== -->
         <TextView
             android:id="@+id/textView11"
@@ -616,6 +672,8 @@
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+
 
     </LinearLayout>
 </ScrollView>

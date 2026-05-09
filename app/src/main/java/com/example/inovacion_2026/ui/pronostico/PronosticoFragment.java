@@ -38,7 +38,7 @@ public class PronosticoFragment extends Fragment {
         binding = FragmentPronosticoBinding.inflate(inflater, container, false);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.0.20:8000/")
+                .baseUrl("http://192.168.0.28:8000/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -114,6 +114,8 @@ public class PronosticoFragment extends Fragment {
                     binding.txtClmDia2.setText(WeatherEmojiUtils.climaToEmoji(segundoDia.getDescripcion()));
                     binding.txtClmDia3.setText(WeatherEmojiUtils.climaToEmoji(tercerDia.getDescripcion()));
 
+                    evaluarAlertaPronostico(primerDia, segundoDia, tercerDia);
+
 
                 } else {
                     Log.e("API_ERROR", "Error en la respuesta: " + response.code());
@@ -132,6 +134,48 @@ public class PronosticoFragment extends Fragment {
             }
         });
 
+    }
+
+    private void evaluarAlertaPronostico(PronosticoItem dia1, PronosticoItem dia2, PronosticoItem dia3) {
+
+        StringBuilder alerta = new StringBuilder();
+
+        // Umbrales configurables
+        float TEMP_CALOR    = 35f;   // °C — calor extremo
+        float TEMP_HELADA   = 5f;    // °C — riesgo de helada
+        boolean hayAlerta   = false;
+
+        PronosticoItem[] dias = { dia1, dia2, dia3 };
+        String[] nombres = { "Mañana", "Pasado mañana", "En 3 días" };
+
+        for (int i = 0; i < dias.length; i++) {
+            float maxima = (float) dias[i].getTemp_max();
+            float minima = (float) dias[i].getTemp_min();
+            String fecha = dias[i].getFecha();
+
+            if (maxima >= TEMP_CALOR) {
+                alerta.append("🌡️ Calor extremo el ").append(fecha)
+                        .append(" (").append(Math.round(maxima)).append("°). Riega temprano.\n");
+                hayAlerta = true;
+            }
+
+            if (minima <= TEMP_HELADA) {
+                alerta.append("❄️ Riesgo de helada el ").append(fecha)
+                        .append(" (").append(Math.round(minima)).append("°). Protege tus plantas.\n");
+                hayAlerta = true;
+            }
+        }
+
+        if (binding == null) return;
+
+        if (hayAlerta) {
+            // Quitar el último salto de línea
+            String mensaje = alerta.toString().trim();
+            binding.txtAlertaPronostico.setText(mensaje);
+            binding.cardAlertaPronostico.setVisibility(View.VISIBLE);
+        } else {
+            binding.cardAlertaPronostico.setVisibility(View.GONE);
+        }
     }
 
     @Override
