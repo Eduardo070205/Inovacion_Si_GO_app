@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Guarda como res/drawable/nav_item_background.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fondo morado suave cuando está seleccionado -->
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#EDE9FE" />
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+    <!-- Fondo transparente normal -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+</selector>

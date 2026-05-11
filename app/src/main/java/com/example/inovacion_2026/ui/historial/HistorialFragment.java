@@ -44,7 +44,7 @@ public class HistorialFragment extends Fragment {
 
         // Retrofit
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.0.28:8000/")
+                .baseUrl("http://192.168.1.10:8000/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         apiService = retrofit.create(apiService.class);

@@ -1,19 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F4F8">
 
+    <!-- HEADER -->
     <TextView
-        android:id="@+id/text_config"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="4dp"
+        android:paddingHorizontal="20dp"
+        android:text="Gestión de Plantas"
+        android:textAlignment="center"
+        android:textColor="#1A1A2E"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- BOTÓN AGREGAR -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#7C3AED">
+
+        <LinearLayout
+            android:id="@+id/btn_agregar_planta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingVertical="16dp"
+            android:paddingHorizontal="20dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌱"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Agregar nueva planta"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- ENCABEZADO TABLA -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="6dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="1dp"
+        app:cardBackgroundColor="#E9D5FF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="PLANTA"
+                android:textColor="#5B21B6"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="UMBRAL"
+                android:textColor="#5B21B6"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:gravity="center"
+                android:text="MÍN °C"
+                android:textColor="#5B21B6"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:gravity="center"
+                android:text="MÁX °C"
+                android:textColor="#5B21B6"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text=""
+                android:textSize="11sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- LOADING -->
+    <ProgressBar
+        android:id="@+id/progress_plantas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cargando configuración..."
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- LISTA VACÍA -->
+    <TextView
+        android:id="@+id/txt_plantas_vacio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="🌿\nNo hay plantas registradas\nToca el botón para agregar una"
+        android:textAlignment="center"
+        android:textColor="#9CA3AF"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <!-- RECYCLERVIEW -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_plantas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="16dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>
