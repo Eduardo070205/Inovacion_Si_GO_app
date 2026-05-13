@@ -38,7 +38,7 @@ public class PronosticoFragment extends Fragment {
         binding = FragmentPronosticoBinding.inflate(inflater, container, false);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.1.10:8000/")
+                .baseUrl("https://api-si-go.onrender.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

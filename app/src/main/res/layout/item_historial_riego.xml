@@ -54,7 +54,7 @@
                 android:id="@+id/txt_item_planta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_badge_hora"
+                android:background="@drawable/bg_badge_verde"
                 android:paddingHorizontal="8dp"
                 android:paddingVertical="3dp"
                 android:text="Tomate"

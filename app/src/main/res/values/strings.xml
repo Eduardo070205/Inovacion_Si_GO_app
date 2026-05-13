@@ -9,7 +9,7 @@
 
     <string name="menu_home">Inicio</string>
     <string name="menu_historial">Historial de riegos</string>
-    <string name="menu_pronostico">Pronosticos del clima</string>
+    <string name="menu_pronostico">Pronósticos del clima</string>
     <string name="menu_gestion_plantas">Gestión de plantas</string>
     
 
@@ -26,7 +26,7 @@
     <string name="titulo_historial">Historial de Riego</string>
 
 
-    <string name="titulo_pronostico">Pronostico del Clima</string>
+    <string name="titulo_pronostico">Pronóstico del Clima</string>
     <string name="proximas_horas">Próximas Horas</string>
     <string name="proximos_3_dias">Próximos 3 días</string>"
     <string name="hora">Hora</string>

@@ -30,6 +30,7 @@
 
         <!-- ===== CARD ALERTA ===== -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_alerta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
@@ -210,7 +211,7 @@
                         android:layout_marginTop="4dp"
                         android:text="@string/espera_datos"
                         android:textColor="#3B82F6"
-                        android:textSize="22sp"
+                        android:textSize="15sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -286,13 +287,13 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_height="128dp"
                     android:gravity="center"
-                    android:paddingVertical="16dp"
-                    android:paddingHorizontal="8dp">
+                    android:orientation="vertical"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="16dp">
 
-                    <!-- Este TextView muestra el emoji del clima (se setea desde Java) -->
+
                     <TextView
                         android:id="@+id/txt_clima"
                         android:layout_width="wrap_content"
@@ -306,10 +307,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:text="@string/clima"
+                        android:textAllCaps="true"
                         android:textColor="#9CA3AF"
                         android:textSize="11sp"
-                        android:textStyle="bold"
-                        android:textAllCaps="true" />
+                        android:textStyle="bold" />
 
                     <!-- Descripción textual debajo del emoji -->
                     <TextView
@@ -392,7 +393,7 @@
                             android:id="@+id/txt_ultimo_dia_riego"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/bg_badge_hora"
+                            android:background="@drawable/bg_badge_verde"
                             android:paddingHorizontal="12dp"
                             android:paddingVertical="5dp"
                             android:text="@string/espera_datos"

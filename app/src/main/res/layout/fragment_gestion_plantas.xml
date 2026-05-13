@@ -29,7 +29,7 @@
         android:layout_marginBottom="8dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="4dp"
-        app:cardBackgroundColor="#7C3AED">
+        app:cardBackgroundColor="@color/green">
 
         <LinearLayout
             android:id="@+id/btn_agregar_planta"
@@ -74,6 +74,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/green"
             android:orientation="horizontal"
             android:paddingHorizontal="12dp"
             android:paddingVertical="8dp">
@@ -83,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1.5"
                 android:text="PLANTA"
-                android:textColor="#5B21B6"
+                android:textColor="#FFFFFF"
                 android:textSize="11sp"
                 android:textStyle="bold" />
 
@@ -93,7 +94,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="UMBRAL"
-                android:textColor="#5B21B6"
+                android:textColor="#FFFFFF"
                 android:textSize="11sp"
                 android:textStyle="bold" />
 
@@ -103,7 +104,7 @@
                 android:layout_weight="0.8"
                 android:gravity="center"
                 android:text="MÍN °C"
-                android:textColor="#5B21B6"
+                android:textColor="#FFFFFF"
                 android:textSize="11sp"
                 android:textStyle="bold" />
 
@@ -113,7 +114,7 @@
                 android:layout_weight="0.8"
                 android:gravity="center"
                 android:text="MÁX °C"
-                android:textColor="#5B21B6"
+                android:textColor="#FFFFFF"
                 android:textSize="11sp"
                 android:textStyle="bold" />
 

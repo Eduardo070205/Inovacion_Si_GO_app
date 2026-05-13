@@ -3,21 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="160dp"
-    android:background="#7C3AED"
+    android:background="@color/green"
     android:orientation="vertical"
     android:gravity="center"
     android:paddingHorizontal="24dp"
     android:paddingVertical="20dp">
 
-    <!-- Logo de la app (reemplaza @mipmap/ic_launcher_round con tu logo cuando lo tengas) -->
+    <!-- Logo de la app  -->
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:contentDescription="@string/nav_header_desc"
-        app:srcCompat="@mipmap/ic_launcher_round"
+        app:srcCompat="@drawable/logo"
         android:background="@drawable/bg_logo_circle"
-        android:padding="4dp" />
+        android:padding="6dp"
+        android:clipToOutline="true"
+        android:outlineProvider="background"
+        android:scaleType="centerCrop" />
 
     <!-- Título "Menú" -->
     <TextView
